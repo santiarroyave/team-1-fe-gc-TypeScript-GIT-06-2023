@@ -1,16 +1,35 @@
-class Videojuego {
-  private titulo: string;
-  private horasEstimadas: number;
-  private entregado: boolean;
-  private genero: string;
-  private compañia: string;
+class Videojuego implements Entregable {
+  constructor(
+    private titulo: string,
+    private horasEstimadas: number = 10,
+    private entregado: boolean = false,
+    private genero: string,
+    private compañia: string,
+  ) {}
 
-  constructor(titulo: string, horasEstimadas: number, genero: string, compañia: string) {
-    this.titulo = titulo;
-    this.horasEstimadas = horasEstimadas;
+  // Implementación Entregable
+  entregar(): void {
+    this.entregado = true;
+  }
+  devolver(): void {
     this.entregado = false;
-    this.genero = genero;
-    this.compañia = compañia;
+  }
+  isEntregado(): boolean {
+    return this.entregado;
+  }
+  compareTo(objeto: any): number {
+    if (objeto instanceof Videojuego) {
+      const otroVideojuego: Videojuego = objeto;
+      if (this.horasEstimadas < otroVideojuego.horasEstimadas) {
+        return -1;
+      } else if (this.horasEstimadas > otroVideojuego.horasEstimadas) {
+        return 1;
+      } else {
+        return 0;
+      }
+    } else {
+      throw new Error('El objeto no es una instancia de Videojuego');
+    }
   }
 
   //GET Y SET DE TITULO
@@ -52,5 +71,3 @@ class Videojuego {
       Compañía: ${this.compañia}`;
   }
 }
-
-export default Videojuego;
