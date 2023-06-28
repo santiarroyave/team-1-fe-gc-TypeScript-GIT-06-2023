@@ -39,6 +39,10 @@ var Videojuego = /** @class */ (function () {
     Videojuego.prototype.setCompañia = function (compañia) {
         this.compañia = compañia;
     };
+    // SOBRESCRIBE TOSTRING
+    Videojuego.prototype.toString = function () {
+        return "Videojuego:\n      T\u00EDtulo: ".concat(this.titulo, "\n      Horas estimadas: ").concat(this.horasEstimadas, "\n      Entregado: ").concat(this.entregado, "\n      G\u00E9nero: ").concat(this.genero, "\n      Compa\u00F1\u00EDa: ").concat(this.compañia);
+    };
     return Videojuego;
 }());
 exports.default = Videojuego;

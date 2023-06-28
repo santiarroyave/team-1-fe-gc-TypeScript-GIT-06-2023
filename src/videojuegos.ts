@@ -47,7 +47,15 @@ class Videojuego {
     this.compañia = compañia;
   }
 
-  //FALTA EL Sobrescribir
+  // SOBRESCRIBE TOSTRING
+  toString(): string {
+    return `Videojuego:
+      Título: ${this.titulo}
+      Horas estimadas: ${this.horasEstimadas}
+      Entregado: ${this.entregado}
+      Género: ${this.genero}
+      Compañía: ${this.compañia}`;
+  }
 }
 
 export default Videojuego;
