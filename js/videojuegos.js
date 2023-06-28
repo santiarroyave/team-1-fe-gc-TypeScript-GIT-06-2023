@@ -1,10 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var Videojuego = /** @class */ (function () {
-    function Videojuego(titulo, horasEstimadas, genero, compañia) {
+    function Videojuego(titulo, horasEstimadas, entregado, genero, compañia) {
+        if (horasEstimadas === void 0) { horasEstimadas = 10; }
+        if (entregado === void 0) { entregado = false; }
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
-        this.entregado = false;
+        this.entregado = entregado;
         this.genero = genero;
         this.compañia = compañia;
     }
@@ -42,4 +42,3 @@ var Videojuego = /** @class */ (function () {
     };
     return Videojuego;
 }());
-exports.default = Videojuego;

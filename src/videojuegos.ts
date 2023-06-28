@@ -1,18 +1,12 @@
 class Videojuego {
-  private titulo: string;
-  private horasEstimadas: number;
-  private entregado: boolean;
-  private genero: string;
-  private compañia: string;
-
-  constructor(titulo: string, horasEstimadas: number, genero: string, compañia: string) {
-    this.titulo = titulo;
-    this.horasEstimadas = horasEstimadas;
-    this.entregado = false;
-    this.genero = genero;
-    this.compañia = compañia;
-  }
-
+  constructor(
+    private titulo: string,
+    private horasEstimadas: number = 10,
+    private entregado: boolean = false,
+    private genero: string,
+    private compañia: string,
+  ) {}
+  
   //GET Y SET DE TITULO
   public  getTitulo(): string {
     return this.titulo;
@@ -52,5 +46,3 @@ class Videojuego {
       Compañía: ${this.compañia}`;
   }
 }
-
-export default Videojuego;
