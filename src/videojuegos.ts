@@ -1,4 +1,4 @@
-class Videojuego {
+class Videojuego implements Entregable {
   constructor(
     private titulo: string,
     private horasEstimadas: number = 10,
@@ -6,7 +6,32 @@ class Videojuego {
     private genero: string,
     private compañia: string,
   ) {}
-  
+
+  // Implementación Entregable
+  entregar(): void {
+    this.entregado = true;
+  }
+  devolver(): void {
+    this.entregado = false;
+  }
+  isEntregado(): boolean {
+    return this.entregado;
+  }
+  compareTo(objeto: any): number {
+    if (objeto instanceof Videojuego) {
+      const otroVideojuego: Videojuego = objeto;
+      if (this.horasEstimadas < otroVideojuego.horasEstimadas) {
+        return -1;
+      } else if (this.horasEstimadas > otroVideojuego.horasEstimadas) {
+        return 1;
+      } else {
+        return 0;
+      }
+    } else {
+      throw new Error('El objeto no es una instancia de Videojuego');
+    }
+  }
+
   //GET Y SET DE TITULO
   public  getTitulo(): string {
     return this.titulo;

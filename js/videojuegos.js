@@ -8,6 +8,33 @@ var Videojuego = /** @class */ (function () {
         this.genero = genero;
         this.compañia = compañia;
     }
+    // Implementación Entregable
+    Videojuego.prototype.entregar = function () {
+        this.entregado = true;
+    };
+    Videojuego.prototype.devolver = function () {
+        this.entregado = false;
+    };
+    Videojuego.prototype.isEntregado = function () {
+        return this.entregado;
+    };
+    Videojuego.prototype.compareTo = function (objeto) {
+        if (objeto instanceof Videojuego) {
+            var otroVideojuego = objeto;
+            if (this.horasEstimadas < otroVideojuego.horasEstimadas) {
+                return -1;
+            }
+            else if (this.horasEstimadas > otroVideojuego.horasEstimadas) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else {
+            throw new Error('El objeto no es una instancia de Videojuego');
+        }
+    };
     //GET Y SET DE TITULO
     Videojuego.prototype.getTitulo = function () {
         return this.titulo;
