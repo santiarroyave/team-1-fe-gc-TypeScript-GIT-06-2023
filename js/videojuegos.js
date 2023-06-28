@@ -2,9 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Videojuego = /** @class */ (function () {
     function Videojuego(titulo, horasEstimadas, genero, compañia) {
-        if (horasEstimadas === void 0) { horasEstimadas = 10; }
-        if (genero === void 0) { genero = ""; }
-        if (compañia === void 0) { compañia = ""; }
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
         this.entregado = false;

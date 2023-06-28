@@ -1,16 +1,11 @@
 class Videojuego {
-  titulo: string;
-  horasEstimadas: number;
-  entregado: boolean;
-  genero: string;
-  compañia: string;
+  private titulo: string;
+  private horasEstimadas: number;
+  private entregado: boolean;
+  private genero: string;
+  private compañia: string;
 
-  constructor(
-    titulo: string,
-    horasEstimadas = 10,
-    genero = "",
-    compañia = ""
-  ) {
+  constructor(titulo: string, horasEstimadas: number, genero: string, compañia: string) {
     this.titulo = titulo;
     this.horasEstimadas = horasEstimadas;
     this.entregado = false;
@@ -19,36 +14,36 @@ class Videojuego {
   }
 
   //GET Y SET DE TITULO
-  getTitulo(): string {
+  public  getTitulo(): string {
     return this.titulo;
   }
-  setTitulo(titulo: string): void {
+  public  setTitulo(titulo: string): void {
     this.titulo = titulo;
   }
   //GET Y SET DE HORASESTIMADAS
-  getHorasEstimadas(): number {
+  public  getHorasEstimadas(): number {
     return this.horasEstimadas;
   }
-  setHorasEstimadas(horasEstimadas: number): void {
+  public  setHorasEstimadas(horasEstimadas: number): void {
     this.horasEstimadas = horasEstimadas;
   }
   //GET Y SET DE GENERO
-  getGenero(): string {
+  public  getGenero(): string {
     return this.genero;
   }
-  setGenero(genero: string): void {
+  public  setGenero(genero: string): void {
     this.genero = genero;
   }
   //GET Y SET DE COMPAÑIA
-  getCompañia(): string {
+  public  getCompañia(): string {
     return this.compañia;
   }
-  setCompañia(compañia: string): void {
+  public  setCompañia(compañia: string): void {
     this.compañia = compañia;
   }
 
   // SOBRESCRIBE TOSTRING
-  toString(): string {
+  public  toString(): string {
     return `Videojuego:
       Título: ${this.titulo}
       Horas estimadas: ${this.horasEstimadas}
