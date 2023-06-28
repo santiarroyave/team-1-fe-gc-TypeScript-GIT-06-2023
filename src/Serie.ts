@@ -34,15 +34,20 @@
         toString()).
  */
 
+class Serie implements Entregable {
+    public titulo: string;
+    public creador: string;
+    public numeroTemporadas: number;
+    public genero: string;
+    private entregado: boolean;
 
-class Serie {
-    constructor(
-        public titulo: string,
-        public creador: string,
-        public numeroTemporadas: number = 3,
-        public entregado: boolean = false,
-        public genero: string = ""
-    ) {}
+    constructor(titulo: string, creador: string, numeroTemporadas?: number, genero?: string) {
+        this.titulo = titulo;
+        this.creador = creador;
+        this.numeroTemporadas = numeroTemporadas || 3;
+        this.genero = genero || "";
+        this.entregado = false;
+    }
 
     // Getters
     getTitulo(): string {
@@ -61,7 +66,7 @@ class Serie {
         return this.genero;
     }
 
-    // Setters
+    // getters
     setTitulo(titulo: string): void {
         this.titulo = titulo;
     }
@@ -78,7 +83,30 @@ class Serie {
         this.genero = genero;
     }
 
-    // toString
+    // Métodos de Entregable
+    entregar(): void {
+        this.entregado = true;
+    }
+
+    devolver(): void {
+        this.entregado = false;
+    }
+
+    isEntregado(): boolean {
+        return this.entregado;
+    }
+
+    // Método compareTo
+    compareTo(obj: Serie): number {
+        if (this.numeroTemporadas > obj.numeroTemporadas) {
+            return 1;
+        } else if (this.numeroTemporadas < obj.numeroTemporadas) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
     toString(): string {
         return `Título: ${this.titulo}
         Creador: ${this.creador}
@@ -88,9 +116,35 @@ class Serie {
     }
 }
 
-const serie1 = new Serie("Serie 1", "Creador 1", 5, true, "Género 1");
-console.log(serie1.toString());
+// const serie1 = new Serie("Serie 1", "Creador 1", 5, true, "Género 1");
+// console.log(serie1.toString());
 
-serie1.setNumeroTemporadas(15);
-serie1.setGenero("Porno");
-console.log(serie1.toString());
+// serie1.setNumeroTemporadas(15);
+// serie1.setGenero("Porno");
+// console.log(serie1.toString());
+
+const series: Serie[] = [];
+series[0] = new Serie("Serie 1", "Creador 1", 7, "Terror");
+series[1] = new Serie("Serie 2", "Creador 2", 10, "Comedia");
+series[2] = new Serie("Serie 3", "Creador 3", 8, "Risa");
+
+series[0].entregar();
+series[1].entregar();
+
+let seriesEntregadas = 0;
+for (const serie of series) {
+    if (serie.isEntregado()) {
+        seriesEntregadas++;
+    }
+}
+
+console.log('Cantidad de Series entregadas: ' +seriesEntregadas);
+
+let serieMasTemporadas = series[0];
+for (const serie of series) {
+    if (serie.compareTo(serieMasTemporadas) === 1) {
+        serieMasTemporadas = serie;
+    }
+}
+
+console.log("Serie con más temporadas:" +serieMasTemporadas.toString());
