@@ -41,7 +41,7 @@ class Serie implements Entregable {
     public genero: string;
     private entregado: boolean;
 
-    constructor(titulo: string, creador: string, numeroTemporadas?: number, genero?: string) {
+    constructor(titulo: string, creador: string, numeroTemporadas: number, genero: string) {
         this.titulo = titulo;
         this.creador = creador;
         this.numeroTemporadas = numeroTemporadas || 3;
