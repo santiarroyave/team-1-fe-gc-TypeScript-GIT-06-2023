@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Videojuego = /** @class */ (function () {
-    function Videojuego(titulo, horasEstimadas, genero, compañia) {
+class Videojuego {
+    constructor(titulo, horasEstimadas, genero, compañia) {
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
         this.entregado = false;
@@ -9,37 +9,41 @@ var Videojuego = /** @class */ (function () {
         this.compañia = compañia;
     }
     //GET Y SET DE TITULO
-    Videojuego.prototype.getTitulo = function () {
+    getTitulo() {
         return this.titulo;
-    };
-    Videojuego.prototype.setTitulo = function (titulo) {
+    }
+    setTitulo(titulo) {
         this.titulo = titulo;
-    };
+    }
     //GET Y SET DE HORASESTIMADAS
-    Videojuego.prototype.getHorasEstimadas = function () {
+    getHorasEstimadas() {
         return this.horasEstimadas;
-    };
-    Videojuego.prototype.setHorasEstimadas = function (horasEstimadas) {
+    }
+    setHorasEstimadas(horasEstimadas) {
         this.horasEstimadas = horasEstimadas;
-    };
+    }
     //GET Y SET DE GENERO
-    Videojuego.prototype.getGenero = function () {
+    getGenero() {
         return this.genero;
-    };
-    Videojuego.prototype.setGenero = function (genero) {
+    }
+    setGenero(genero) {
         this.genero = genero;
-    };
+    }
     //GET Y SET DE COMPAÑIA
-    Videojuego.prototype.getCompañia = function () {
+    getCompañia() {
         return this.compañia;
-    };
-    Videojuego.prototype.setCompañia = function (compañia) {
+    }
+    setCompañia(compañia) {
         this.compañia = compañia;
-    };
+    }
     // SOBRESCRIBE TOSTRING
-    Videojuego.prototype.toString = function () {
-        return "Videojuego:\n      T\u00EDtulo: ".concat(this.titulo, "\n      Horas estimadas: ").concat(this.horasEstimadas, "\n      Entregado: ").concat(this.entregado, "\n      G\u00E9nero: ").concat(this.genero, "\n      Compa\u00F1\u00EDa: ").concat(this.compañia);
-    };
-    return Videojuego;
-}());
+    toString() {
+        return `Videojuego:
+      Título: ${this.titulo}
+      Horas estimadas: ${this.horasEstimadas}
+      Entregado: ${this.entregado}
+      Género: ${this.genero}
+      Compañía: ${this.compañia}`;
+    }
+}
 exports.default = Videojuego;
