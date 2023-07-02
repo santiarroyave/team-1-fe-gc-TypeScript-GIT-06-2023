@@ -96,12 +96,20 @@ console.log("Se han devuelto correctamente.");
 // 5.5. Por último, indica el Videojuego tiene más horas estimadas y la serie con mas temporadas. Muestralos en pantalla con toda su información (usa el método toString())
 console.log("5.5. Indicar videojuego con mas horas:");
 
-// Comparador Raul (mirar)
-// let serieMasTemporadas = series[0];
-// for (const serie of series) {
-//     if (serie.compareTo(serieMasTemporadas) === 1) {
-//         serieMasTemporadas = serie;
-//     }
-// }
+let videojuegoMasHoras = videojuegosLista[0];
+for (let i = 1; i < videojuegosLista.length; i++) {
+    if (videojuegosLista[i].getHorasEstimadas() > videojuegoMasHoras.getHorasEstimadas()) {
+    videojuegoMasHoras = videojuegosLista[i];
+    }
+}
+console.log(videojuegoMasHoras.toString());
 
 console.log("Indicar serie con mas temporadas:");
+
+let serieMasTemporadas = seriesLista[0];
+for (let i = 1; i < seriesLista.length; i++) {
+    if (seriesLista[i].getNumeroTemporadas() > serieMasTemporadas.getNumeroTemporadas()) {
+    serieMasTemporadas = seriesLista[i];
+    }
+}
+console.log(serieMasTemporadas.toString());
