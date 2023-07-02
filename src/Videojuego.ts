@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 class Videojuego implements Entregable {
   constructor(
     private titulo: string,
@@ -6,6 +7,24 @@ class Videojuego implements Entregable {
     private genero: string,
     private compañia: string,
   ) {}
+=======
+class Videojuego implements Entregable {
+  
+    private titulo: string;
+    private horasEstimadas: number;
+    private entregado: boolean;
+    private genero: string;
+    private compañia: string;
+
+    constructor(titulo: string, genero: string, compañia: string, horasEstimadas: number = 10) 
+    {
+      this.titulo = titulo;
+      this.horasEstimadas = horasEstimadas;
+      this.entregado = false;
+      this.genero = genero;
+      this.compañia = compañia;
+    }
+>>>>>>> Stashed changes
 
   // Implementación Entregable
   entregar(): void {
@@ -17,18 +36,13 @@ class Videojuego implements Entregable {
   isEntregado(): boolean {
     return this.entregado;
   }
-  compareTo(objeto: any): number {
-    if (objeto instanceof Videojuego) {
-      const otroVideojuego: Videojuego = objeto;
-      if (this.horasEstimadas < otroVideojuego.horasEstimadas) {
-        return -1;
-      } else if (this.horasEstimadas > otroVideojuego.horasEstimadas) {
-        return 1;
-      } else {
-        return 0;
-      }
+  compareTo(objeto: Videojuego): number {
+    if (this.horasEstimadas > objeto.getHorasEstimadas()) {
+      return 1;
+    } else if (this.horasEstimadas < objeto.getHorasEstimadas()) {
+      return -1;
     } else {
-      throw new Error('El objeto no es una instancia de Videojuego');
+      return 0;
     }
   }
 

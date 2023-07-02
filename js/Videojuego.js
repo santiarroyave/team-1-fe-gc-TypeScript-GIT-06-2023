@@ -1,9 +1,15 @@
+<<<<<<< Updated upstream
 "use strict";
 class Videojuego {
     constructor(titulo, horasEstimadas = 10, entregado = false, genero, compañia) {
+=======
+var Videojuego = /** @class */ (function () {
+    function Videojuego(titulo, genero, compañia, horasEstimadas) {
+        if (horasEstimadas === void 0) { horasEstimadas = 10; }
+>>>>>>> Stashed changes
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
-        this.entregado = entregado;
+        this.entregado = false;
         this.genero = genero;
         this.compañia = compañia;
     }
@@ -63,6 +69,7 @@ class Videojuego {
         this.compañia = compañia;
     }
     // SOBRESCRIBE TOSTRING
+<<<<<<< Updated upstream
     toString() {
         return `Videojuego:
       Título: ${this.titulo}
@@ -72,3 +79,10 @@ class Videojuego {
       Compañía: ${this.compañia}`;
     }
 }
+=======
+    Videojuego.prototype.toString = function () {
+        return "Videojuego:\n      T\u00EDtulo: ".concat(this.titulo, "\n      Horas estimadas: ").concat(this.horasEstimadas, "\n      Entregado: ").concat(this.entregado, "\n      G\u00E9nero: ").concat(this.genero, "\n      Compa\u00F1\u00EDa: ").concat(this.compañia);
+    };
+    return Videojuego;
+}());
+>>>>>>> Stashed changes
