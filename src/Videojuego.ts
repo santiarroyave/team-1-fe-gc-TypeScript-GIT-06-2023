@@ -1,4 +1,3 @@
-import { Entregable } from './Entregable';
 class Videojuego implements Entregable {
   
     private titulo: string;
