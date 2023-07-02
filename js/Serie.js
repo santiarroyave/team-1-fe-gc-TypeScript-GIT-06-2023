@@ -34,20 +34,20 @@
         temporadas. Muestralos en pantalla con toda su información (usa el método
         toString()).
  */
+let defNumTemporadas = 3;
+let defGenero = "";
+let defEntregado = false;
 class Serie {
-    constructor(titulo, creador, numeroTemporadas, genero) {
+    constructor(titulo, creador) {
         this.titulo = titulo;
+        this.numeroTemporadas = defNumTemporadas;
+        this.entregado = defEntregado;
+        this.genero = defGenero;
         this.creador = creador;
-        this.numeroTemporadas = numeroTemporadas || 3;
-        this.genero = genero || "";
-        this.entregado = false;
     }
     // Getters
     getTitulo() {
         return this.titulo;
-    }
-    getCreador() {
-        return this.creador;
     }
     getNumeroTemporadas() {
         return this.numeroTemporadas;
@@ -55,18 +55,21 @@ class Serie {
     getGenero() {
         return this.genero;
     }
-    // getters
+    getCreador() {
+        return this.creador;
+    }
+    // Setters
     setTitulo(titulo) {
         this.titulo = titulo;
-    }
-    setCreador(creador) {
-        this.creador = creador;
     }
     setNumeroTemporadas(numeroTemporadas) {
         this.numeroTemporadas = numeroTemporadas;
     }
     setGenero(genero) {
         this.genero = genero;
+    }
+    setCreador(creador) {
+        this.creador = creador;
     }
     // Métodos de Entregable
     entregar() {
@@ -98,28 +101,3 @@ class Serie {
         Entregado: ${this.entregado}`;
     }
 }
-// const serie1 = new Serie("Serie 1", "Creador 1", 5, true, "Género 1");
-// console.log(serie1.toString());
-// serie1.setNumeroTemporadas(15);
-// serie1.setGenero("Porno");
-// console.log(serie1.toString());
-const series = [];
-series[0] = new Serie("Serie 1", "Creador 1", 7, "Terror");
-series[1] = new Serie("Serie 2", "Creador 2", 10, "Comedia");
-series[2] = new Serie("Serie 3", "Creador 3", 8, "Risa");
-series[0].entregar();
-series[1].entregar();
-let seriesEntregadas = 0;
-for (const serie of series) {
-    if (serie.isEntregado()) {
-        seriesEntregadas++;
-    }
-}
-console.log('Cantidad de Series entregadas: ' + seriesEntregadas);
-let serieMasTemporadas = series[0];
-for (const serie of series) {
-    if (serie.compareTo(serieMasTemporadas) === 1) {
-        serieMasTemporadas = serie;
-    }
-}
-console.log("Serie con más temporadas:" + serieMasTemporadas.toString());
