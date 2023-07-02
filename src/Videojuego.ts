@@ -1,13 +1,4 @@
-<<<<<<< Updated upstream
-class Videojuego implements Entregable {
-  constructor(
-    private titulo: string,
-    private horasEstimadas: number = 10,
-    private entregado: boolean = false,
-    private genero: string,
-    private compañia: string,
-  ) {}
-=======
+import { Entregable } from './Entregable';
 class Videojuego implements Entregable {
   
     private titulo: string;
@@ -24,7 +15,6 @@ class Videojuego implements Entregable {
       this.genero = genero;
       this.compañia = compañia;
     }
->>>>>>> Stashed changes
 
   // Implementación Entregable
   entregar(): void {
