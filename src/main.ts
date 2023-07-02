@@ -73,3 +73,11 @@ for (let i = 0; i < seriesLista.length; i++) {
 
 // 5.5. Por último, indica el Videojuego tiene más horas estimadas y la serie con mas temporadas. Muestralos en pantalla con toda su información (usa el método toString())
 
+
+// Comparador Raul (mirar)
+// let serieMasTemporadas = series[0];
+// for (const serie of series) {
+//     if (serie.compareTo(serieMasTemporadas) === 1) {
+//         serieMasTemporadas = serie;
+//     }
+// }
