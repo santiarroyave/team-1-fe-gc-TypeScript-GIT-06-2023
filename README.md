@@ -19,3 +19,15 @@ Trabajo en en equipo. ex01
 3. Crear metodo toString()
 4. Crear 2 objetos Libro
 5. Indicar cuál de los 2 tiene más páginas
+
+## Ejercicio 3
+1. Crear clase Raices
+2. Ingresar 3 coeficientes en los atributos a, b, c
+3. Construir un objeto con esos 3 valores
+4. Operaciones a hacer:
+    1. getDiscriminante() `double`
+    2. tieneRaices() `booleano`
+    3. tieneRaiz() `booleano`
+    4. calcular() `void` imprime en consola
+    5. obtenerRaices() `void` imprime en consola
+    6. obtenerRaiz() `void` imprime en consola
