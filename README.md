@@ -2,51 +2,20 @@
 Trabajo en en equipo. ex01
 
 ## Ejercicio 1
-Crearemos una clase llamada Serie con las siguientes características:
-* Sus atributos son titulo, numero de temporadas, entregado, genero y creador.
-* Por defecto, el numero de temporadas es de 3 temporadas y entregado false. El resto de atributos serán
-valores por defecto según el tipo del atributo.
+1. Crear clase "Serie"
+2. Crear clase "Videojuego"
+3. Crear interfaz "Entregable"
+4. Implementar métodos de la interfaz
+5. Crear aplicación ejecutable
+    1. Crear 2 arrays de 5 posiciones para Series y otros 2 para Videojuegos
+    2. Crear un objeto en cada posición del array
+    3. Entregas algunos Videojuegos y Series con el método entregar().
+    4. Contar cuantas Series y Videojuegos hay entregados. Devolverlos.
+    5. Indicar que Videojuego tiene más horas y qué Serie más temporadas. Mostrar toda la info con toString()
 
-Los constructores que se implementaran serán:
-    ✓ Un constructor con el titulo y creador. El resto por defecto.
-
-Los métodos que se implementara serán:
-* Métodos get de todos los atributos, excepto de entregado.
-* Métodos set de todos los atributos, excepto de entregado.
-* Sobrescribe los métodos toString
-
-Crearemos una clase Videojuego con las siguientes características:
-* Sus atributos son titulo, horas estimadas, entregado, genero y compañia.
-* Por defecto, las horas estimadas serán de 10 horas y entregado false. El resto de atributos
-serán valores por defecto según el tipo del atributo.
-
-Los constructores que se implementaran serán:
-    ✓ Un constructor con todos los atributos, excepto de entregado.
-Los métodos que se implementara serán:
-* Métodos get de todos los atributos, excepto de entregado.
-* Métodos set de todos los atributos, excepto de entregado.
-* Sobrescribe los métodos toString.
-
-Como vemos, en principio, las clases anteriores no son padre-hija, pero
-si tienen en común, por eso vamos a hacer una interfaz llamada
-Entregable con los siguientes métodos:
-* entregar(): cambia el atributo prestado a true.
-* devolver(): cambia el atributo prestado a false.
-* isEntregado(): devuelve el estado del atributo prestado.
-* Método compareTo (Object a), compara las horas estimadas en los
-videojuegos y en las series el numero de temporadas. Como
-parámetro que tenga un objeto, no es necesario que implementes la
-interfaz Comparable. Recuerda el uso de los casting de objetos.
-
-Implementa los anteriores métodos en las clases Videojuego y Serie. Ahora crea
-una aplicación ejecutable y realiza lo siguiente:
-* Crea dos arrays, uno de Series y otro de Videojuegos, de 5 posiciones cada
-uno.
-* Crea un objeto en cada posición del array, con los valores que desees, puedes
-usar distintos constructores.
-* Entrega algunos Videojuegos y Series con el método entregar().
-* Cuenta cuantos Series y Videojuegos hay entregados. Al contarlos,
-devuélvelos.
-* Por último, indica el Videojuego tiene más horas estimadas y la serie con mas
-temporadas. Muestralos en pantalla con toda su información (usa el método
-toString()).
+## Ejercicio 2
+1. Crear una clase Libro
+2. Crear sus setters y getters
+3. Crear metodo toString()
+4. Crear 2 objetos Libro
+5. Indicar cuál de los 2 tiene más páginas
