@@ -1,9 +1,7 @@
 "use strict";
-class Profesor {
+class Profesor extends Usuarios {
     constructor(nombre, edad, sexo, materia) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = sexo;
+        super(nombre, edad, sexo);
         this.materia = materia;
     }
     //GET Y SET DE NOMBRE
@@ -36,8 +34,14 @@ class Profesor {
     }
     // Probabilidad de que el profesor este disponible
     estaDisponible() {
-        const randomNumber = Math.random();
-        return randomNumber >= 0.2;
+        // Se considera disponible si devuelve true
+        let random = Math.random();
+        if (random < 0.8) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
 //const profesor = new Profesor("Juan", 35, "masculino", "matemáticas");

@@ -1,13 +1,10 @@
-class Profesor implements Usuarios {
-    private nombre: string;
-    private edad: number;
-    private sexo: tSexo;
-    private materia: string;
+type tMateria = "matemáticas" | "filosofía" | "física";
 
-    constructor(nombre: string, edad: number, sexo: tSexo, materia: string) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = sexo;
+class Profesor extends Usuarios {
+    private materia: tMateria;
+
+    constructor(nombre:string, edad: number, sexo: tSexo, materia: tMateria){
+        super(nombre, edad, sexo);
         this.materia = materia;
     }
 
@@ -15,7 +12,7 @@ class Profesor implements Usuarios {
     public getNombre(): string {
         return this.nombre;
     }
-    public  setNombre(nombre: string): void {
+    public setNombre(nombre: string): void {
         this.nombre = nombre;
     }
     //GET Y SET DE EDAD
@@ -33,16 +30,21 @@ class Profesor implements Usuarios {
         this.sexo = sexo;
     }
     //GET Y SET DE MATERIA
-    public getMateria(): string {
+    public getMateria(): tMateria {
         return this.materia;
     }
-    public setMateria(materia: string): void {
+    public setMateria(materia: tMateria): void {
         this.materia = materia;
     }
     // Probabilidad de que el profesor este disponible
-    estaDisponible(): boolean {
-        const randomNumber = Math.random();
-        return randomNumber >= 0.2;
+    estaDisponible(): boolean{
+        // Se considera disponible si devuelve true
+        let random = Math.random();
+        if(random < 0.8){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
 

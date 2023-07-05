@@ -1,33 +1,46 @@
-let estudiante1 = new Estudiante("Juan", 18, "masculino", 8);
-let estudiante2 = new Estudiante("María", 17, "femenino", 7);
-let estudiante3 = new Estudiante("Pedro", 16, "masculino", 9);
-let estudiante4 = new Estudiante("Ana", 18, "femenino", 4);
-let estudiante5 = new Estudiante("Luis", 17, "masculino", 5);
-let estudiante6 = new Estudiante("Sara", 16, "femenino", 6);
-let estudiante7 = new Estudiante("Carlos", 18, "masculino", 7);
-let estudiante8 = new Estudiante("Lucía", 17, "femenino", 8);
-let estudiante9 = new Estudiante("Pablo", 16, "masculino", 9);
-let estudiante10 = new Estudiante("Carmen", 18, "femenino", 4);
-let estudiante11 = new Estudiante("Javier", 17, "masculino", 5);
-let estudiante12 = new Estudiante("Laura", 16, "femenino", 6);
-let estudiante13 = new Estudiante("Jorge", 18, "masculino", 7);
-let estudiante14 = new Estudiante("Sandra", 17, "femenino", 8);
-let estudiante15 = new Estudiante("Manuel", 16, "masculino", 9);
-let estudiantes = [estudiante1, estudiante2, estudiante3, estudiante4, estudiante5, estudiante6, estudiante7, estudiante8, estudiante9, estudiante10, estudiante11, estudiante12, estudiante13, estudiante14, estudiante15];
-let aprobadosMasculinos = 0;
-let aprobadosFemeninos = 0;
-estudiantes.forEach(function (estudiante) {
-    if (!estudiante.hacerNovillos()) {
-        var calificacion = estudiante.getCalificacion();
-        if (calificacion >= 5) {
-            if (estudiante.sexo === "masculino") {
-                aprobadosMasculinos++;
-            }
-            else if (estudiante.sexo === "femenino") {
-                aprobadosFemeninos++;
-            }
-        }
+"use strict";
+let defNumEstudiantes = 30;
+let defNumProfes = 15;
+// Generando alumnos y profesores y aulas aleatorios
+let estudiantes = new Array(defNumEstudiantes);
+let profesores = new Array(defNumProfes);
+let aulas = new Array(6);
+for (let i = 0; i < estudiantes.length; i++) {
+    let alumnoGenerado = genAlumno();
+    estudiantes[i] = new Estudiante(alumnoGenerado[0], alumnoGenerado[1], alumnoGenerado[2], alumnoGenerado[3]);
+}
+for (let i = 0; i < profesores.length; i++) {
+    let profeGenerado = genProfe();
+    profesores[i] = new Profesor(profeGenerado[0], profeGenerado[1], profeGenerado[2], profeGenerado[3]);
+}
+for (let z = 0; z < aulas.length; z++) {
+    aulas[z] = new Aula(z, materiaRandom(), profesores[numRandom(defNumProfes)], estudiantes);
+}
+// Mostrando los alumnos y los profesores
+console.log("=============================================================");
+console.log("Información de las listas");
+console.log("=============================================================");
+console.log(estudiantes);
+console.log(profesores);
+console.log(aulas);
+// Mostramos qué aulas permiten hacer clase y en tal caso mostramos las personas aprobadas
+console.log("=============================================================");
+console.log("Alumnos aprobados de las clases que se dan");
+console.log("=============================================================");
+for (let i = 0; i < aulas.length; i++) {
+    if (aulas[i].sePuedeDarClase() == true) {
+        console.log("==========================");
+        console.log(`El aula ${i} si puede dar clase.`);
+        aulas[i].mostrarAlumnosAprobados();
     }
-});
-console.log('Aprobados Masculinos:', aprobadosMasculinos);
-console.log('Aprobados Femeninos:', aprobadosFemeninos);
+    else {
+        console.log(`El aula ${i} no puede dar clase.`);
+    }
+}
+// console.log("=============================================================");
+// console.log("Información de las aulas");
+// console.log("=============================================================");
+// for (let i = 0; i < aulas.length; i++) {
+//     console.log(`Aula: ${i}`);
+//     console.log(aulas[i].getInfoAula());
+// }
