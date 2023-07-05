@@ -31,3 +31,10 @@ Trabajo en en equipo. ex01
     4. calcular() `void` imprime en consola
     5. obtenerRaices() `void` imprime en consola
     6. obtenerRaiz() `void` imprime en consola
+
+## Ejercicio 4
+1. Crear clase Estudiante
+2. Crear clase Profesor
+3. Crear clase abstracta con atributos y metodos en comun
+4. Crear clase Aula
+5. Mostrar las aulas que se pueden impartir segun las condiciones
