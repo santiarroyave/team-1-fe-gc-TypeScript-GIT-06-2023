@@ -1,11 +1,20 @@
 
 type tSexo = "masculino" | "femenino";
 
-interface Usuarios{
+abstract class Usuarios{
+    // ATRIBUTOS
+    protected nombre: string;
+    protected edad: number;
+    protected sexo: tSexo;
 
-    // Atributos
-    getNombre(): string;
-    getEdad(): number;
-    getSexo(): tSexo;
-
+    // CONSTRUCTORES
+    constructor(nombre:string, edad:number, sexo: tSexo){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+    }
+    
+    // METODOS
+    abstract estaDisponible():boolean;
+    
 }

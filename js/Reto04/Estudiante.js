@@ -1,14 +1,12 @@
-// Queremos representar con programación orientada a objetos, un aula con estudiantes y un
-// profesor.
+"use strict";
+// Queremos representar con programación orientada a objetos, un aula con estudiantes y un profesor.
 // Tanto de los estudiantes como de los profesores necesitamos saber su nombre, edad y sexo. De los
-// estudiantes, queremos saber también su calificación actual (entre 0 y 10) y del profesor que materia
-// da.
+// estudiantes, queremos saber también su calificación actual (entre 0 y 10) y del profesor que materiada.
 // Las materias disponibles son matemáticas, filosofía y física.
 // Los estudiantes tendrán un 50% de hacer novillos, por lo que si hacen novillos no van a clase pero
 // aunque no vayan quedara registrado en el aula (como que cada uno tiene su sitio).
 // El profesor tiene un 20% de no encontrarse disponible (reuniones, baja, etc.)
 // Las dos operaciones anteriores deben llamarse igual en Estudiante y Profesor (polimorfismo).
-// *Reto 4
 // El aula debe tener un identificador numérico, el número máximo de estudiantes y para que esta
 // destinada (matemáticas, filosofía o física). Piensa que más atributos necesita.
 // Un aula para que se pueda dar clase necesita que el profesor esté disponible, que el profesor de la
@@ -20,34 +18,38 @@
 // momento (imaginad que les están entregando las notas).
 // NOTA: Los datos pueden ser aleatorios (nombres, edad, calificaciones, etc.) siempre y cuando
 // tengan sentido (edad no puede ser 80 en un estudiante o calificación ser 12).
-var Estudiante = /** @class */ (function () {
-    function Estudiante(nombre, edad, sexo, calificacion) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = sexo;
+class Estudiante extends Usuarios {
+    constructor(nombre, edad, sexo, calificacion) {
+        super(nombre, edad, sexo);
         this.calificacion = calificacion;
     }
     // Getters
-    Estudiante.prototype.getNombre = function () {
+    getNombre() {
         return this.nombre;
-    };
-    Estudiante.prototype.getEdad = function () {
+    }
+    getEdad() {
         return this.edad;
-    };
-    Estudiante.prototype.getSexo = function () {
+    }
+    getSexo() {
         return this.sexo;
-    };
-    Estudiante.prototype.getCalificacion = function () {
+    }
+    getCalificacion() {
         return this.calificacion;
-    };
-    Estudiante.prototype.getHaceNovillos = function () {
-        return this.haceNovillos;
-    };
-    Estudiante.prototype.getAprobado = function () {
+    }
+    getAprobado() {
         return this.calificacion >= 5;
-    };
-    Estudiante.prototype.hacerNovillos = function () {
+    }
+    hacerNovillos() {
         return Math.random() < 0.5;
-    };
-    return Estudiante;
-}());
+    }
+    estaDisponible() {
+        // Se considera disponible si devuelve true
+        let random = Math.random();
+        if (random < 0.5) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+}
