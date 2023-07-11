@@ -38,3 +38,9 @@ Trabajo en en equipo. ex01
 3. Crear clase abstracta con atributos y metodos en comun
 4. Crear clase Aula
 5. Mostrar las aulas que se pueden impartir segun las condiciones
+
+## Ejercicio 5
+1. Crear clase Espectador
+2. Crear clase Pelicula
+3. Crear clase Cine
+4. Sentar a espectadores que cumplan las condiciones de edad y precio en asientos aleatorios y libres, si están ocupados se les busca otro.

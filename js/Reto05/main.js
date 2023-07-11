@@ -17,10 +17,8 @@ for (let i = 0; i < peliculas.length; i++) {
 }
 // Generamos Sala de cine
 let cine = new Sala();
-cine.setPelicula(peliculas[numRandomMax(15)].titulo);
+cine.setPelicula(peliculas[numRandomMax(15)]);
 cine.setPrecio(numRandomMinMax(5, 10));
-// cine.setPelicula = peliculas[numRandomMax(15)];
-// cine.setPrecio = numRandomMinMax(5,10);
 // Mostramos datos
 console.log("____________________________________________");
 console.log("DATOS GENERADOS ALEATORIAMENTE");
@@ -30,4 +28,26 @@ console.log("Peliculas:");
 console.log(peliculas);
 console.log("Sala de Cine:");
 console.log(cine);
+console.log(`- Título pelicula: ${cine.getPelicua().titulo}`);
+console.log(`- Edad mínima: ${cine.getPelicua().edadMinima} años`);
+console.log(`- Precio entrada: ${cine.getPrecio()} €`);
 console.log("____________________________________________");
+// Rellenar sala
+let edadMinima = cine.getPelicua().edadMinima;
+// - Comprobar Edad Minima
+// - Comprobar Precio
+// - Rellenar / Rechazar
+for (let i = 0; i < espectadores.length; i++) {
+    if (espectadores[i].getDinero() >= cine.getPrecio() && espectadores[i].getEdad() >= edadMinima) {
+        // Aceptados
+        cine.rellenarSala(espectadores[i]);
+    }
+    else {
+        // Rechazados
+        console.log(`No puede entrar ${espectadores[i].getNombre()} de ${espectadores[i].getEdad()} años con ${espectadores[i].getDinero()} €`);
+    }
+}
+// Mostramos la sala de cine con los Espectadores
+console.log("____________________________________________");
+console.log("Sala de cine:");
+console.log(cine.getAsientos());

@@ -12,118 +12,118 @@ let defAsientos = [
     {
         columna: "A",
         filas: [
-            { num: 8, espectador: "" },
-            { num: 7, espectador: "" },
-            { num: 6, espectador: "" },
-            { num: 5, espectador: "" },
-            { num: 4, espectador: "" },
-            { num: 3, espectador: "" },
-            { num: 2, espectador: "" },
-            { num: 1, espectador: "" }
+            { fila: 8, espectador: "" },
+            { fila: 7, espectador: "" },
+            { fila: 6, espectador: "" },
+            { fila: 5, espectador: "" },
+            { fila: 4, espectador: "" },
+            { fila: 3, espectador: "" },
+            { fila: 2, espectador: "" },
+            { fila: 1, espectador: "" }
         ]
     },
     {
         columna: "B",
         filas: [
-            { num: 8, espectador: "" },
-            { num: 7, espectador: "" },
-            { num: 6, espectador: "" },
-            { num: 5, espectador: "" },
-            { num: 4, espectador: "" },
-            { num: 3, espectador: "" },
-            { num: 2, espectador: "" },
-            { num: 1, espectador: "" }
+            { fila: 8, espectador: "" },
+            { fila: 7, espectador: "" },
+            { fila: 6, espectador: "" },
+            { fila: 5, espectador: "" },
+            { fila: 4, espectador: "" },
+            { fila: 3, espectador: "" },
+            { fila: 2, espectador: "" },
+            { fila: 1, espectador: "" }
         ]
     },
     {
         columna: "C",
         filas: [
-            { num: 8, espectador: "" },
-            { num: 7, espectador: "" },
-            { num: 6, espectador: "" },
-            { num: 5, espectador: "" },
-            { num: 4, espectador: "" },
-            { num: 3, espectador: "" },
-            { num: 2, espectador: "" },
-            { num: 1, espectador: "" }
+            { fila: 8, espectador: "" },
+            { fila: 7, espectador: "" },
+            { fila: 6, espectador: "" },
+            { fila: 5, espectador: "" },
+            { fila: 4, espectador: "" },
+            { fila: 3, espectador: "" },
+            { fila: 2, espectador: "" },
+            { fila: 1, espectador: "" }
         ]
     },
     {
         columna: "D",
         filas: [
-            { num: 8, espectador: "" },
-            { num: 7, espectador: "" },
-            { num: 6, espectador: "" },
-            { num: 5, espectador: "" },
-            { num: 4, espectador: "" },
-            { num: 3, espectador: "" },
-            { num: 2, espectador: "" },
-            { num: 1, espectador: "" }
+            { fila: 8, espectador: "" },
+            { fila: 7, espectador: "" },
+            { fila: 6, espectador: "" },
+            { fila: 5, espectador: "" },
+            { fila: 4, espectador: "" },
+            { fila: 3, espectador: "" },
+            { fila: 2, espectador: "" },
+            { fila: 1, espectador: "" }
         ]
     },
     {
         columna: "E",
         filas: [
-            { num: 8, espectador: "" },
-            { num: 7, espectador: "" },
-            { num: 6, espectador: "" },
-            { num: 5, espectador: "" },
-            { num: 4, espectador: "" },
-            { num: 3, espectador: "" },
-            { num: 2, espectador: "" },
-            { num: 1, espectador: "" }
+            { fila: 8, espectador: "" },
+            { fila: 7, espectador: "" },
+            { fila: 6, espectador: "" },
+            { fila: 5, espectador: "" },
+            { fila: 4, espectador: "" },
+            { fila: 3, espectador: "" },
+            { fila: 2, espectador: "" },
+            { fila: 1, espectador: "" }
         ]
     },
     {
         columna: "F",
         filas: [
-            { num: 8, espectador: "" },
-            { num: 7, espectador: "" },
-            { num: 6, espectador: "" },
-            { num: 5, espectador: "" },
-            { num: 4, espectador: "" },
-            { num: 3, espectador: "" },
-            { num: 2, espectador: "" },
-            { num: 1, espectador: "" }
+            { fila: 8, espectador: "" },
+            { fila: 7, espectador: "" },
+            { fila: 6, espectador: "" },
+            { fila: 5, espectador: "" },
+            { fila: 4, espectador: "" },
+            { fila: 3, espectador: "" },
+            { fila: 2, espectador: "" },
+            { fila: 1, espectador: "" }
         ]
     },
     {
         columna: "G",
         filas: [
-            { num: 8, espectador: "" },
-            { num: 7, espectador: "" },
-            { num: 6, espectador: "" },
-            { num: 5, espectador: "" },
-            { num: 4, espectador: "" },
-            { num: 3, espectador: "" },
-            { num: 2, espectador: "" },
-            { num: 1, espectador: "" }
+            { fila: 8, espectador: "" },
+            { fila: 7, espectador: "" },
+            { fila: 6, espectador: "" },
+            { fila: 5, espectador: "" },
+            { fila: 4, espectador: "" },
+            { fila: 3, espectador: "" },
+            { fila: 2, espectador: "" },
+            { fila: 1, espectador: "" }
         ]
     },
     {
         columna: "H",
         filas: [
-            { num: 8, espectador: "" },
-            { num: 7, espectador: "" },
-            { num: 6, espectador: "" },
-            { num: 5, espectador: "" },
-            { num: 4, espectador: "" },
-            { num: 3, espectador: "" },
-            { num: 2, espectador: "" },
-            { num: 1, espectador: "" }
+            { fila: 8, espectador: "" },
+            { fila: 7, espectador: "" },
+            { fila: 6, espectador: "" },
+            { fila: 5, espectador: "" },
+            { fila: 4, espectador: "" },
+            { fila: 3, espectador: "" },
+            { fila: 2, espectador: "" },
+            { fila: 1, espectador: "" }
         ]
     },
     {
         columna: "I",
         filas: [
-            { num: 8, espectador: "" },
-            { num: 7, espectador: "" },
-            { num: 6, espectador: "" },
-            { num: 5, espectador: "" },
-            { num: 4, espectador: "" },
-            { num: 3, espectador: "" },
-            { num: 2, espectador: "" },
-            { num: 1, espectador: "" }
+            { fila: 8, espectador: "" },
+            { fila: 7, espectador: "" },
+            { fila: 6, espectador: "" },
+            { fila: 5, espectador: "" },
+            { fila: 4, espectador: "" },
+            { fila: 3, espectador: "" },
+            { fila: 2, espectador: "" },
+            { fila: 1, espectador: "" }
         ]
     }
 ];
@@ -153,5 +153,54 @@ class Sala {
     }
     setPrecio(precio) {
         this.precioEntrada = precio;
+    }
+    rellenarSala(espectador) {
+        // Añadir de manera random solo si está libre
+        let colRandom = numRandomMax(8);
+        let filaRandom = numRandomMax(7);
+        let asignado = false;
+        // Si un asiento está ocupado busca otro de manera aleatoria
+        if (this.estaLleno() == false) {
+            do {
+                if (this.asientos[colRandom].filas[filaRandom].espectador == "") {
+                    this.asientos[colRandom].filas[filaRandom].espectador = espectador;
+                    asignado = true;
+                }
+                else {
+                    colRandom = numRandomMax(8);
+                    filaRandom = numRandomMax(7);
+                }
+            } while (asignado == false);
+        }
+        else {
+            console.log("Sala llena");
+        }
+        ;
+    }
+    estaLleno() {
+        // Cuenta cuantos asientos hay ocupados
+        let lleno = false;
+        let contAsientos = 0;
+        let contPersonas = 0;
+        // Recorre las columnas (A,B,C,D,E,F,G,H,I) y todas las filas
+        for (let i = 0; i < this.asientos.length; i++) {
+            for (let x = 0; x < this.asientos[i].filas.length; x++) {
+                // console.log(`Recorriendo col ${this.asientos[i].columna} fila ${this.asientos[i].filas[x].fila}`);
+                // Contador de asientos
+                contAsientos++;
+                // Cuenta las personas que hay sentadas
+                if (this.asientos[i].filas[x].espectador == "") {
+                    // console.log("Vacio");
+                }
+                else {
+                    contPersonas++;
+                }
+            }
+        }
+        // Solo si TODOS los asientos estan ocupados devuelve true
+        if (contPersonas >= contAsientos) {
+            lleno = true;
+        }
+        return lleno;
     }
 }
